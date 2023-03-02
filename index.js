@@ -12,8 +12,8 @@ app.use(cors());
 app.use(express.json());
 
 const pool = new Pool({
-  user: "postgres",
-  passwoord: "postgres",
+  user: process.env.DB_USERNAME,
+  passwoord: process.env.DB_PASSWORD,
   host: "localhost",
   port: 5432,
   database: "Scraper_POC",
