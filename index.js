@@ -122,7 +122,7 @@ const formatApartment = async (apartment) => {
 
 async function get(url, params) {
   const client = new scrapingbee.ScrapingBeeClient(
-    "F7LIATPAVNVIOKIS22IKVUOJYZGP0YSMRDCDOVYE72LCRDQPJJDENLXAPQWGELSUI2EBKUWTRL7QYUWA"
+    process.env.SCRAPINGBEE_API_KEY
   );
   const response = await client.get({
     url: url,
